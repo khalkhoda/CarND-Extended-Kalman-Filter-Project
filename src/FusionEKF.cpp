@@ -43,7 +43,7 @@ FusionEKF::FusionEKF() {
    */
 
    ekf_.x_ = VectorXd(4);
-   ekf_.x_ << 0, 0, 0, 0;
+   ekf_.x_ << 1, 1, 1, 1;
 
 }
 
