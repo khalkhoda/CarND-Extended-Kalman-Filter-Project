@@ -35,6 +35,8 @@ class FusionEKF {
   // check whether the tracking toolbox was initialized or not (first measurement)
   bool is_initialized_;
 
+  bool is_second_meas_ready_;
+
   // previous timestamp
   long long previous_timestamp_;
 
@@ -44,6 +46,8 @@ class FusionEKF {
   Eigen::MatrixXd R_radar_;
   Eigen::MatrixXd H_laser_;
   Eigen::MatrixXd Hj_;
+
+  void init_state_position(const MeasurementPackage &measurement_pack);
 };
 
 #endif // FusionEKF_H_

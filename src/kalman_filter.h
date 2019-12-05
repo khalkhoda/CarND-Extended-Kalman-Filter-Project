@@ -63,6 +63,11 @@ class KalmanFilter {
 
   // measurement covariance matrix
   Eigen::MatrixXd R_;
+
+private:
+
+  void offsetInRange2pi(float &angle);
+
 };
 
 #endif // KALMAN_FILTER_H_
